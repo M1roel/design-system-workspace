@@ -2,7 +2,7 @@
 @use "../../styles/variables.scss" as v;
 @use "sass:color";
 
-.button-primary {
+.button.primary {
   appearance: none;
   background: linear-gradient(135deg, v.$primary, v.$accent);
   border: none;
