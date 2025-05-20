@@ -1,7 +1,27 @@
-button.primary {
-  background-color: green;
+@use "../../styles/mixins.scss" as m;
+@use "../../styles/variables.scss" as v;
+
+.button-primary {
+  appearance: none;
+  background: linear-gradient(135deg, v.$primary, v.$accent);
+  border: none;
+  border-radius: v.$radius;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
   color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background: color.adjust(v.$primary, $lightness: 10%);
+  }
+
+  &:focus {
+    outline: 2px solid white;
+    outline-offset: 2px;
+  }
 }
+
 button.danger {
   background-color: red;
   color: white;
