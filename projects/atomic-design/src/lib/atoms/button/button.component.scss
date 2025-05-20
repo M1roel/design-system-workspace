@@ -2,16 +2,19 @@
 @use "../../styles/variables.scss" as v;
 @use "sass:color";
 
-.button.primary {
-  appearance: none;
-  background: linear-gradient(135deg, v.$primary, v.$accent);
-  border: none;
-  border-radius: v.$radius;
+.button {
   padding: 0.5rem 1rem;
+  border-radius: v.$radius;
   font-weight: 600;
-  color: white;
   cursor: pointer;
   transition: background 0.3s ease;
+  border: none;
+  font-family: v.$font-family;
+}
+
+.button-primary {
+  background: linear-gradient(135deg, v.$primary, v.$accent);
+  color: white;
 
   &:hover {
     background: color.adjust(v.$primary, $lightness: 10%);
@@ -22,6 +25,7 @@
     outline-offset: 2px;
   }
 }
+
 
 button.danger {
   background-color: red;
