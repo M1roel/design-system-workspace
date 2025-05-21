@@ -5,8 +5,10 @@ import { CommonModule } from '@angular/common';
   selector: 'atomic-button',
   standalone: true,
   imports: [CommonModule],
-  template: `<button [ngClass]="variant">{{ label }}</button>`,
-  styleUrls: ['./button.component.scss'] // oder .css, je nach dem
+  template: `<button [ngClass]="['button', 'button-' + variant]">
+    {{ label }}
+  </button>`,
+  styleUrls: ['./button.component.scss'], // oder .css, je nach dem
 })
 export class ButtonComponent {
   @Input() label = '';
